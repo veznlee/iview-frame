@@ -1,0 +1,151 @@
+.page-performanc{
+  font-size:14px;
+  .border-left-title{
+    padding-left: 10px;
+    height: 26px;
+    margin-bottom: 20px;
+    line-height: 26px;
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    border-left:4px solid #1630d6;
+    &.mt30{
+      margin-top:30px;
+    }
+  }
+  .detail-item{
+    margin-bottom:10px;
+    .fix-item{
+      width:120px;
+    }
+    .auto-item{
+      padding-left:8px;
+    }
+  }
+  .absolute-btns{
+    position:absolute;
+    left:800px;
+    top:0;
+    .ivu-btn + .ivu-btn{
+      margin-left:20px;
+    }
+  }
+  .file-img-list{
+    margin-left:-10px;
+    margin-right:-10px;
+    .list-item{
+      float:left;
+      padding:10px;
+    }
+    .img-box,img{
+      width:100px;
+      height:100px;
+      overflow: hidden;
+      cursor:pointer;
+    }
+  }
+}
+
+.performanc-item-list{
+  .list-item{
+    margin-bottom:20px;
+    .item-desc{
+      margin:5px 0 10px;
+    }
+  }
+  .img-item{
+    float:left;
+    width:110px;
+    height:110px;
+    margin-right:10px;
+    margin-bottom:10px;
+    cursor: pointer;
+    img{
+      width:100%;
+      height:100%;
+    }
+  }
+}
+.performanc-item-top{
+  .name,.score,.state,.uname,.time{
+    display:inline-block;
+  }
+  .name{
+    margin-right:20px;
+  }
+  .score{
+    margin-right:50px;
+  }
+  .state{
+    margin-right:50px;
+  }
+  .uname{
+    margin-right:10px;
+  }
+}
+
+
+.approval-list{
+  .list-item{
+    position: relative;
+    padding:5px 0;
+    .item-before{
+      width:180px;
+      float:left;
+    }
+    .item-after{
+      position: relative;
+      margin-left:200px;
+      .time{
+        display: inline-block;
+        margin-left:10px;
+        font-size:12px;
+      }
+      .desc{
+        margin-top:5px;
+      }
+    }
+    &::after{
+      content: ""; display: block; height:0; clear:both; visibility: hidden;
+    }
+    &+.list-item{
+      padding-top:50px;
+      &::before{
+        content: '';
+        display:block;
+        width:2px;
+        height:46px;
+        position: absolute;
+        left:153px;
+        top:0;
+        background:#c5c5c5;
+      }
+    }
+  }
+  .item-header{
+    &::after{
+      content: ""; display: block; height:0; clear:both; visibility: hidden;
+    }
+    .header-left{
+      float:left;
+      width:130px;
+      padding-right:20px;
+      text-align: right;
+      .user-name{
+        display: inline-block;
+        margin-top:5px;
+      }
+    }
+    .header-img{
+      float:right;
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+      overflow: hidden;
+      img{
+        width:100%;
+        height:100%;
+      }
+    }
+  }
+} 

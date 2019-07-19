@@ -1,0 +1,85 @@
+//表格基础样式
+.table-basic-style{
+  .v-table-header{
+    tr td, tr td .v-table-title-cell{
+      // height: 35px !important;
+      // line-height: 35px !important;
+      background-color: #3B64A2;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      border-color: #3B64A2;
+    }
+  }
+  .v-table-views{
+    border: 1px solid #3b64a2;
+    background-color: #1a1d36;
+  }    
+}
+
+//斑马条纹表格
+.theme-table-stripe-dark{
+  .v-table-header{
+    tr td, tr td .v-table-title-cell{
+      // height: 35px !important;
+      // line-height: 35px !important;
+      background-color: #3B64A2;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      border-color: #3B64A2;
+    }
+  }
+  .v-table-body{
+    tr:nth-child(odd){
+      background-color: #2A3559;
+      td, td .v-table-body-cell{
+        background-color: #2A3559;
+        // height: 30px !important;
+        // line-height: 30px !important;
+        color: #fff;
+        font-size: 12px; 
+        border-color: #2A3559 #2A3559 #345185;
+      }
+    }
+    tr:nth-child(even){
+      background-color: #262C49;
+      td, td .v-table-body-cell{
+        background-color: #262C49;
+        color: #fff;
+        font-size: 12px;
+        // height: 30px !important;
+        // line-height: 30px !important;
+        border-top: none !important;
+        border-color: #262C49 #262C49 #345185;
+      }
+    }
+  } 
+
+}
+
+//合并表格
+.theme-table-merge-dark{
+  .v-table-rightview{
+    border-color: #3b64a2;
+  }
+  .v-table-views.v-table-class{
+    background-color: #3b64a2 !important;
+  }
+  .v-table-rightview-special-border td:last-child .v-table-body-cell{
+    border-right-width:1px !important;
+  }
+  .v-table-body tr td, td .v-table-body-cell{
+    background-color: #262C49;
+    color: #fff;
+    font-size: 12px;
+    // height: 30px !important;
+    // line-height: 30px !important;
+    border-top: none !important;
+    border-color:#345185;
+  }
+  .v-table-empty-inner{
+    background-color: #262C49;
+    color: #fff;
+  }
+}

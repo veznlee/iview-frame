@@ -1,0 +1,154 @@
+.common-board-body.examine{
+  position:relative;
+  padding-top:30px;
+  .c-t-container{
+    height:40%;
+    .col-list{
+      height:100%;
+      .col-item{
+        float:left;
+        width:25%;
+        height:100%;
+        padding:0 18px;
+      }
+      .item-inner{
+        position:relative;
+        padding-top:30px;
+        height:100%;
+        border-radius: 4px;
+        border: 1px solid #474d85;
+        background: rgba(41, 44, 69, 0.4);
+      }
+      .total-position{
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:170px;
+        height:170px;
+        margin-left:-85px;
+        margin-top:-85px;
+      }
+      .access-lt{
+        background:url(./img/access_l_c1.png);
+        background-size:100% 100%; 
+      }
+      .access-lb{
+        background:url(./img/access_l_c2.png);
+        background-size:100% 100%; 
+      }
+      .access-rt{
+        background:url(./img/access_r_c1.png);
+        background-size:100% 100%; 
+      }
+      .access-rb{
+        background:url(./img/access_r_c2.png);
+        background-size:100% 100%; 
+      }
+    }
+  }
+  .access-num{
+    padding-top:60px;
+    text-align:center;
+    .num{
+      height:36px;
+      line-height: 36px;
+      font-size:32px;
+      font-weight:bold;
+    }
+    .text{
+      height:30px;
+      line-height: 30px;
+      font-size:14px;
+      color:#C4C7F1;
+    }
+  }
+  .access-score{
+    padding-top:67px;
+    text-align:center;
+    .num{
+      height:36px;
+      line-height: 36px;
+      font-size:32px;
+      font-weight:bold;
+    }
+    .text{
+      margin-top:25px;
+      height:30px;
+      line-height: 30px;
+      font-size:14px;
+      color:#C4C7F1;
+    }
+  }
+  .c-b-container{
+    height:60%;
+    padding-top:20px;
+    .canvas-box{
+      float:left;
+      width:50%;
+      height:100%;
+      padding:0 18px;
+      &.box-l{
+        width:40%;
+      }
+      &.box-r{
+        width:60%;
+      }
+    }
+    .card-wrap{
+      position: relative;
+      height:100%;
+      padding-top:30px;
+      border:1px solid #474d85;
+      background:rgba(41,44,69,.4);
+    }
+  }
+}
+.examine{
+  .c-b-container,.c-t-container{
+    .card-title{
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      height:30px;
+      .title-position{
+        width:180px;
+        margin:0 auto;
+      }
+    }
+    .card-body{
+      position: relative;
+      height:100%;
+      padding:0 40px;
+    }
+  }
+  .c-b-container{
+    .chart-box{
+      height:100%;
+    }
+  }
+  .c-page-table{
+    th{
+      padding:5px 8px;
+      font-size:14px;
+      font-weight:bold;
+      color:#43B4FD;
+      text-align: center;
+    }
+    td{
+      padding:15px 8px;
+      text-align: center;
+      font-size:14px;
+      color:#c8e2ff;
+      .color-1{
+        color:#21FF93;
+      }
+      .color-2{
+        color:#FFA42D;
+      }
+      .color-3{
+        color:#FF4E6F;
+      }
+    }
+  }
+}

@@ -104,9 +104,9 @@ export default {
       }
     },
     handleTagsOption (type) {
-      if (type.includes('all')) {
-        // 关闭所有，除了home
-        let res = this.$appConfig.hasHomePage ? this.list.filter(item => item.name === this.$appConfig.homeName) : this.list[0]
+      if (type.includes('all')) { // 关闭所有，根據有沒有home页判斷留下當前页還是home页
+        let restName = this.$appConfig.hasHomePage ? this.$appConfig.homeName : this.$route.name
+        let res = this.list.filter(item => item.name === restName)
         this.$emit('on-close', res, 'all')
       } else if (type.includes('others')) {
         // 关闭除当前页和home页的其他页

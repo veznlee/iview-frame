@@ -24,8 +24,17 @@ export function getPermission() {
 }
 
 export function loginOut() {
-  return tokenInstance({
-    url: '/user/logout',
-    method: 'get'
+  // return tokenInstance({
+  //   url: '/user/logout',
+  //   method: 'get'
+  // })
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        code: 0,
+        data: {},
+        msg: 'success'
+      })
+    }, 50)
   })
 }

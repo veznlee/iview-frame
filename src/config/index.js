@@ -1,4 +1,3 @@
-import Cookies from 'js-cookie'
 const _appPre = 'er'
 const appConfig = {
   appTitle: '服务区应急上报系统',
@@ -29,20 +28,6 @@ const appConfig = {
       developmentOff: true // 设为true后在开发环境不会收集错误信息，方便开发中排查错误
     }
   }
-}
-
-export const setToken = (token) => {
-  Cookies.set(appConfig.appTokenName, token, { expires: appConfig.cookieExpires || 1 })
-}
-
-export const getToken = () => {
-  const token = Cookies.get(appConfig.appTokenName)
-  if (token) return token
-  else return false
-}
-
-export const removeToken = () => {
-  return Cookies.remove(appConfig.appTokenName)
 }
 
 export default appConfig

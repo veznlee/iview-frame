@@ -19,7 +19,7 @@ const router = new Router({
   base: process.env.BASE_URL
 })
 
-// 遍历后台传来的路由字符串，转换为组件对象
+// 遍历后台传来的路由字符串，将组件名转换为组件对象
 function filterAsyncRouter(asyncRouterMap) {
   const accessedRouters = asyncRouterMap.filter(route => {
     if (route.component) {
@@ -55,7 +55,16 @@ function routerGo(list, to, next) {
     redirect: '/error_404'
   })
   router.addRoutes(componentRouter) // 动态添加路由
-  next({ ...to, replace: true })
+  // 如果直接输入了类似localhost:8080这样的情况，那to.fullPath = '/',直接让它跳转到首页
+  if(to.fullPath === '/'){
+    if(hasHomePage){
+      next({ name: homeName, replace: true })
+    }else{
+      next({ name: store.state.user.firstRoute, replace: true })
+    }
+  }else{
+    next({ ...to, replace: true })
+  }
 }
 
 // 跳转路径，对有children的路径进行拦截
@@ -99,7 +108,7 @@ router.beforeEach((to, from, next) => {
           setTimeout(() => { // 模拟后台拿到路由
             const requestRouter = asyncRouters
             store.dispatch('user/setPermission', getMenuByRouter(requestRouter))
-            store.dispatch('user/setFirstRoute', getFirstRoute(requestRouter[0]))
+            store.dispatch('user/setFirstRoute', getFirstRoute(requestRouter[0])) //设置第一个可以跳转的路由
             storage.setLocalObj(appConfig.appSPName, requestRouter) // 存储路由到localStorage
             routerGo(requestRouter, to, next) // 执行路由跳转方法
           }, 50)
